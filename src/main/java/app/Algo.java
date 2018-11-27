@@ -15,6 +15,13 @@ public class Algo {
             return false;
     }
 
+    public static BigInteger euclidesInverse(BigInteger a, BigInteger m) throws IllegalArgumentException {
+
+            return new BigInteger("0");
+
+
+    }
+
     // returns the GCD of a and b
     // returns the GCD of a and b
     public static BigInteger euclidesGCD(BigInteger a, BigInteger b) {

@@ -88,6 +88,35 @@ public class AlgoTest {
         Algo.euclidesAreCoprime(a, b);
     }
 
+
+    @Test
+    public void euclidesInverseTest_barelyLegalArguments() {
+        BigInteger a = BigInteger.ZERO;
+        BigInteger m = BigInteger.ONE;
+
+        Algo.euclidesInverse(a, m);
+        // no exception thrown = success
+    }
+
+    @Test
+    public void euclidesInverseTest_illegalFirstArgument() {
+        BigInteger a = new BigInteger("-1");
+        BigInteger m = new BigInteger("678");
+
+        exception.expect(IllegalArgumentException.class);
+        Algo.euclidesInverse(a, m);
+    }
+
+    @Test
+    public void euclidesInverseTest_illegalSecondArgument() {
+        BigInteger a = new BigInteger("10000");
+        BigInteger m = new BigInteger("0");
+
+        exception.expect(IllegalArgumentException.class);
+        Algo.euclidesInverse(a, m);
+    }
+
+
     @Test
     public void euclidesGCD_knownResult () {
         BigInteger a = new BigInteger("12");
